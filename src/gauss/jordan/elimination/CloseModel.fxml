@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- Author: Sai Kiran Vadlamudi -->
+
+<AnchorPane id="AnchorPane" minHeight="90.58223806152091" minWidth="444.109375" prefHeight="90.58223806152091" prefWidth="444.109375" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gauss.jordan.elimination.CloseController">
+  <children>
+    <Text layoutX="31.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure you want to exit? All data will be deleted.">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Text>
+    <Button fx:id="proceed" layoutX="95.0" layoutY="52.0" mnemonicParsing="false" prefWidth="92.0" text="Proceed" />
+    <Button fx:id="cancel" layoutX="246.0" layoutY="52.0" mnemonicParsing="false" prefWidth="92.0" text="Cancel" />
+  </children>
+</AnchorPane>

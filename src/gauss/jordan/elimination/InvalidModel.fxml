@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<!-- Author: Sai Kiran Vadlamudi -->
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" minHeight="35.000099999997474" minWidth="203.0" prefHeight="35.000099999997474" prefWidth="203.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gauss.jordan.elimination.InvalidController">
+  <children>
+    <Text fill="RED" layoutX="41.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid Cell Entry!">
+      <font>
+        <Font size="16.0" />
+      </font>
+    </Text>
+  </children>
+</AnchorPane>

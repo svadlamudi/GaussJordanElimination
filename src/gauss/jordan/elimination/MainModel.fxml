@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Author: Sai Kiran Vadlamudi -->
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="813.0" snapToPixel="true" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gauss.jordan.elimination.MainController">
+  <children>
+    <MenuBar fx:id="mainMenu" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="800.0" style="-fx-background-color: derive(#1d1d1d,20%);&#10;-fx-selection-bar: derive(-fx-background,-7%);" useSystemMenuBar="false" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File" fx:id="file">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#closeClicked" text="Close (ESC)" fx:id="closeButton" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#clearFieldClicked" text="Clear" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="View" fx:id="options">
+          <items>
+            <SeparatorMenuItem mnemonicParsing="false" text="Output Options" />
+            <RadioMenuItem mnemonicParsing="false" selected="true" text="Simple" fx:id="simple">
+              <toggleGroup>
+                <ToggleGroup fx:id="outputToggle" />
+              </toggleGroup>
+            </RadioMenuItem>
+            <RadioMenuItem mnemonicParsing="false" text="Advanced" toggleGroup="$outputToggle" fx:id="advanced" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help" fx:id="help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#aboutClicked" text="About" fx:id="aboutButton" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.30456226880394577" focusTraversable="true" prefHeight="576.0" prefWidth="800.0" style="-fx-background-color: gainsboro;&#10;-fx-box-border: gainsboro;&#10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: gainsboro;">
+          <children>
+            <TabPane prefHeight="574.0" prefWidth="221.0" style="-fx-background-color: gainsboro;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <tabs>
+                <Tab style="-fx-background-color: lightsteelblue;&#10;-fx-border-color: grey;&#10;-fx-background-radius: 5;" text="Manual">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color:  lightsteelblue;">
+                      <children>
+                        <Label layoutX="25.0" layoutY="53.0" style="-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );" text="Rows:" visible="true" />
+                        <TextField fx:id="rowNum" layoutX="63.0" layoutY="50.0" onKeyReleased="#valueValidation" prefWidth="164.0" promptText="# of Rows" style="-fx-background-radius: 6;" />
+                        <Label layoutX="7.0" layoutY="95.0" style="-fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );" text="Columns:" />
+                        <TextField fx:id="columnNum" layoutX="63.0" layoutY="92.0" onKeyReleased="#valueValidation" prefWidth="163.00009999999747" promptText="# of Columns" style="-fx-background-radius: 6;" />
+                        <Button fx:id="createMatrix" cancelButton="false" defaultButton="true" disable="true" layoutX="63.0" layoutY="136.0" mnemonicParsing="false" onAction="#createMatrixClicked" prefHeight="24.0" prefWidth="163.0" style="-fx-background-color: linear-gradient(#13BFA3, #2A5058);&#10;-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Create Matrix" />
+                        <TextArea editable="false" layoutX="14.0" layoutY="271.0" prefHeight="262.0" prefWidth="203.0" style="-fx-background-color: ivory;&#10;-fx-background-radius: 10;&#10;-fx-border-color: grey;&#10;-fx-border-radius: 10;" text="Steps:&#10;&#10;1. Enter # of Rows.&#10;&#9;(1 to 999)&#10;&#10;2. Enter # of Columns.&#10;&#9;(1 to 999)&#10;&#10;3. Click &quot;Create Matrix&quot;.&#10;&#10;4. Enter Values into Matrix.&#10;&#10;5. Click &quot;Calculate&quot;.&#10;&#10;6. View Results." wrapText="true" />
+                        <Label fx:id="rowError" layoutX="208.0" layoutY="53.0" prefWidth="9.0" text="" visible="true" />
+                        <Label fx:id="columnError" layoutX="208.0" layoutY="95.0" prefWidth="9.0" text="" visible="true" />
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab style="-fx-background-color: lightyellow;&#10;-fx-border-color: grey;&#10;-fx-background-radius: 5;" text="File">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: lightyellow;">
+                      <children>
+                        <Button fx:id="readFile" alignment="CENTER" defaultButton="true" layoutX="28.0" layoutY="104.0" mnemonicParsing="false" onAction="#readFileClicked" prefHeight="36.0" prefWidth="175.0" style="-fx-background-color: linear-gradient(#13BFA3, #2A5058);&#10;-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="File Read" />
+                        <TextArea editable="false" layoutX="13.0" layoutY="251.0" prefHeight="273.0" prefWidth="203.0" style="-fx-background-radius: 10;&#10;-fx-border-color: grey;&#10;-fx-border-radius: 10;&#10;-fx-background-color: ivory;" text="Steps:&#10;&#10;1. Enter data into file.&#10;&#10;2. Click &quot;File Read&quot;.&#10;&#10;3. Browse for File.&#10;&#10;4. View Results." wrapText="true" />
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+          </children>
+        </AnchorPane>
+        <AnchorPane maxHeight="574.0000999999975" maxWidth="561.0" minHeight="574.0000999999975" minWidth="561.0" prefHeight="574.0000999999975" prefWidth="561.0" style="-fx-background-color: gainsboro;">
+          <children>
+            <TextArea fx:id="resultsField" editable="false" focusTraversable="true" prefHeight="546.0" prefWidth="543.0" promptText="No Results" style="-fx-background-radius: 10;&#10;-fx-highlight-fill: lightblue;&#10;-fx-background-color: white;&#10;-fx-text-fill: black;" visible="true" wrapText="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>

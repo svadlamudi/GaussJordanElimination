@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Author: Sai Kiran Vadlamudi -->
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ivory;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gauss.jordan.elimination.AboutController">
+  <children>
+    <TextArea cache="false" editable="false" prefHeight="243.0" prefWidth="572.0" style="-fx-highlight-fill: transparent;&#10;-fx-background-color: lightgrey;&#10;-fx-background-radius: 10;" text="Description:&#9;&#10;&#9;This application performs the Gauss-Jordan Elimination on the given Matrix.&#10;&#10;Input:&#10;&#9;Manual Input:&#10;&#9;&#9;Follow steps on the &quot;Manual&quot; Tab.&#10;&#9;File Input:&#10;&#9;&#9;Follow steps on the &quot;File&quot; Tab.&#10;&#10;Output:&#10;&#9;Simple:&#10;&#9;&#9;Only the initial and reduced matrices are shown no intermediate steps.&#10;&#9;Advanced:&#10;&#9;&#9;Initial and reduced matrices are shown along with the steps." wrapText="true" AnchorPane.bottomAnchor="143.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0" />
+    <TextArea disable="false" editable="false" focusTraversable="false" prefHeight="120.0" prefWidth="572.0" style="-fx-background-color: lightgrey;&#10;-fx-background-radius: 10;&#10;-fx-highlight-fill: transparent;&#10;" text="Authors:&#10;&#10;&#9;Ivan Melnikov - Gauss Jordan Algorithm&#9;&#10;&#9;Sai Kiran Vadlamudi - User Interface&#10;&#9;Matthew Zielonko - File Operations" visible="true" wrapText="true" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="267.0" />
+  </children>
+</AnchorPane>

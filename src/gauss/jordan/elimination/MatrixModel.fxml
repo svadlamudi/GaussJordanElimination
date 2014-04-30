@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Author: Sai Kiran Vadlamudi -->
+
+<AnchorPane id="AnchorPane" fx:id="mainPane" prefHeight="-1.0" prefWidth="709.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="gauss.jordan.elimination.MatrixController">
+  <children>
+    <SplitPane fx:id="mainSplit" dividerPositions="0.173974540311174" focusTraversable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="660.0" style="-fx-background-color: lightsteelblue;" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+      <items>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="160.0" prefWidth="120.0">
+          <children>
+            <Button fx:id="calculate" cancelButton="false" defaultButton="true" mnemonicParsing="false" onAction="#calculateClicked" prefWidth="84.0" style="-fx-background-color: linear-gradient(#13BFA3, #2A5058);&#10;-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );" text="Calculate" AnchorPane.bottomAnchor="69.5" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="69.5" />
+          </children>
+        </AnchorPane>
+        <StackPane id="StackPane" fx:id="matrixPane" disable="false" maxHeight="-1.0" maxWidth="-1.0" minHeight="-1.0" minWidth="-1.0">
+          <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </padding>
+        </StackPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
