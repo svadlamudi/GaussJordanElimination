@@ -1,4 +1,4 @@
-GaussJordanElimination
+Gauss Jordan Elimination
 ======================
 
 A Gauss Jordan Elimination calculator that reduces given matrix to row-reduced echelon form.
