@@ -26,6 +26,7 @@ Required:
 
 Developers:
 
-Sai Kiran Vadlamudi - GUI
-Ivan Melnikov - Gauss Jordan Algorithm
-Matthew Zielonko - File Operations
+Sai Kiran Vadlamudi - GUI  
+Ivan Melnikov - Gauss Jordan Algorithm  
+Matthew Zielonko - File Operations  
+
